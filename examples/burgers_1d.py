@@ -215,17 +215,16 @@ def main() -> None:
     print(f"Minimum Loss: {min_loss:.6e}")
     print(f"Total Iterations: {len(history['total_loss'])}")
     
-    # Compute residuals for diagnostics
-    with torch.no_grad():
-        _, loss_components = pinn.compute_loss(
-            x_pde=data['x_pde'],
-            t_pde=data['t_pde'],
-            x_ic=data['x_ic'],
-            t_ic=data['t_ic'],
-            u_ic=data['u_ic'],
-            x_bc=data['x_bc'],
-            t_bc=data['t_bc']
-        )
+    # Compute residuals for diagnostics (requires gradients for PDE residual computation)
+    _, loss_components = pinn.compute_loss(
+        x_pde=data['x_pde'],
+        t_pde=data['t_pde'],
+        x_ic=data['x_ic'],
+        t_ic=data['t_ic'],
+        u_ic=data['u_ic'],
+        x_bc=data['x_bc'],
+        t_bc=data['t_bc']
+    )
     
     print("\nLoss Components:")
     print(f"  - PDE Residual: {loss_components['pde']:.6e}")
