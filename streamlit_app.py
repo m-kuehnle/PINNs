@@ -25,7 +25,7 @@ from src.utils.data import generate_training_data, generate_test_grid, initial_c
 # Page configuration
 st.set_page_config(
     page_title="PINN: Burgers' Equation",
-    page_icon="🌊",
+    page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -220,11 +220,11 @@ def create_loss_plot(loss_history, adam_iter):
 
 def main():
     # Header
-    st.markdown('<div class="main-header">🌊 Physics-Informed Neural Network</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">Physics-Informed Neural Network</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Interactive Solution of the 1D Burgers\' Equation</div>', unsafe_allow_html=True)
     
     # Mathematical formulation in expander
-    with st.expander("📐 Mathematical Formulation", expanded=False):
+    with st.expander("Mathematical Formulation", expanded=False):
         st.latex(r"\frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} = \nu \frac{\partial^2 u}{\partial x^2}")
         st.markdown("""
         **Domain:** $x \in [-1, 1]$, $t \in [0, 1]$
@@ -237,7 +237,7 @@ def main():
         """)
     
     # Sidebar controls
-    st.sidebar.header("⚙️ Configuration")
+    st.sidebar.header("Configuration")
     
     st.sidebar.subheader("Physics Parameters")
     nu = st.sidebar.slider(
@@ -295,7 +295,7 @@ def main():
     )
     
     # Train button
-    if st.sidebar.button("🚀 Train PINN", type="primary"):
+    if st.sidebar.button("Train PINN", type="primary"):
         st.session_state.train_requested = True
     
     # Training and visualization
@@ -311,7 +311,7 @@ def main():
                 )
                 
                 # Success message
-                st.success(f"✅ Training complete! Final Loss: {history['total_loss'][-1]:.2e} | Device: {device}")
+                st.success(f"Training complete! Final Loss: {history['total_loss'][-1]:.2e} | Device: {device}")
                 
                 # Generate test grid
                 X, T = generate_test_grid(n_x=200, n_t=200)
@@ -319,7 +319,7 @@ def main():
                 
                 # Main visualization
                 st.markdown("---")
-                st.markdown("### 🎨 Interactive 3D Visualization")
+                st.markdown("### Interactive 3D Visualization")
                 
                 # 3D Surface Plot
                 fig_3d = create_3d_surface_plot(X, T, U)
@@ -329,7 +329,7 @@ def main():
                 col1, col2 = st.columns(2)
                 
                 with col1:
-                    st.markdown("### 📊 Initial vs Final State")
+                    st.markdown("### Initial vs Final State")
                     x_1d = X[:, 0]
                     u_initial = initial_condition(x_1d)
                     u_final = U[:, -1]
@@ -337,13 +337,13 @@ def main():
                     st.plotly_chart(fig_comp, use_container_width=True)
                 
                 with col2:
-                    st.markdown("### 📉 Loss Evolution")
+                    st.markdown("### Loss Evolution")
                     fig_loss = create_loss_plot(history['total_loss'], adam_iter)
                     st.plotly_chart(fig_loss, use_container_width=True)
                 
                 # Statistics
                 st.markdown("---")
-                st.markdown("### 📈 Training Statistics")
+                st.markdown("### Training Statistics")
                 
                 col1, col2, col3, col4 = st.columns(4)
                 
@@ -361,15 +361,15 @@ def main():
                     st.metric("Network Parameters", f"{network_params:,}")
                 
             except Exception as e:
-                st.error(f"❌ Training failed: {str(e)}")
+                st.error(f"Training failed: {str(e)}")
                 st.exception(e)
     
     else:
-        # Initial state - show information
-        st.info("👈 Configure parameters in the sidebar and click **Train PINN** to start!")
+        # Initial state
+        st.info("Configure parameters in the sidebar and click **Train PINN** to start.")
         
-        # Show example visualization placeholder
-        st.markdown("### 🎯 What You'll Get:")
+        # Show example visualization
+        st.markdown("### What You'll Get")
         st.markdown("""
         - **Interactive 3D Surface Plot**: Rotate, zoom, and explore the solution in real-time
         - **Initial vs Final Comparison**: See how the solution evolves from the initial sine wave
@@ -380,7 +380,7 @@ def main():
         # Add example image or info
         st.markdown("---")
         st.markdown("""
-        ### 🧠 How PINNs Work:
+        ### How PINNs Work
         
         Physics-Informed Neural Networks embed the physics (PDE) directly into the loss function:
         
@@ -400,7 +400,7 @@ def main():
     st.markdown("---")
     st.markdown("""
         <div style='text-align: center; color: #666; padding: 20px;'>
-            Built with ❤️ using PyTorch, Streamlit & Plotly | 
+            Built using PyTorch, Streamlit & Plotly | 
             <a href='https://github.com/m-kuehnle/PINNs' target='_blank'>View on GitHub</a>
         </div>
     """, unsafe_allow_html=True)

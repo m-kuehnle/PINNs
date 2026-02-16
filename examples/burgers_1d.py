@@ -35,7 +35,7 @@ def main() -> None:
     """
     Main function to train and evaluate the PINN for Burgers' equation.
     """
-    # ==================== Configuration ====================
+    # 
     print("=" * 80)
     print(" Physics-Informed Neural Network for 1D Burgers' Equation")
     print("=" * 80)
@@ -75,7 +75,7 @@ def main() -> None:
         print(f"\nDevice: {device}")
         print("Note: No GPU acceleration available")
     
-    # ==================== Network Initialization ====================
+    # 
     print("\n" + "=" * 80)
     print("Initializing Neural Network")
     print("=" * 80)
@@ -86,7 +86,7 @@ def main() -> None:
     print(f"Activation Function: tanh")
     print(f"Initialization: Xavier Uniform")
     
-    # ==================== PINN Setup ====================
+    # 
     print("\n" + "=" * 80)
     print("Setting up PINN Solver")
     print("=" * 80)
@@ -98,7 +98,7 @@ def main() -> None:
     print(f"IC: u(x, 0) = -sin(πx)")
     print(f"BC: u({X_MIN}, t) = u({X_MAX}, t) = 0")
     
-    # ==================== Data Generation ====================
+    # 
     print("\n" + "=" * 80)
     print("Generating Training Data")
     print("=" * 80)
@@ -119,7 +119,7 @@ def main() -> None:
     print(f"Boundary condition points: {2 * N_BC} (2 boundaries)")
     print(f"Total training points: {N_PDE + N_IC + 2 * N_BC}")
     
-    # ==================== Training Setup ====================
+    # 
     print("\n" + "=" * 80)
     print("Training Configuration")
     print("=" * 80)
@@ -145,7 +145,7 @@ def main() -> None:
         )
         return total_loss
     
-    # ==================== Training ====================
+    # 
     trainer = PINNTrainer(network=network, device=device)
     
     history = trainer.train(
@@ -156,7 +156,7 @@ def main() -> None:
         print_every=1000
     )
     
-    # ==================== Evaluation ====================
+    # 
     print("\n" + "=" * 80)
     print("Evaluating Solution")
     print("=" * 80)
@@ -174,7 +174,7 @@ def main() -> None:
     u_initial = initial_condition(x_1d)  # IC: u(x, 0)
     u_final = U[:, -1]  # Final state: u(x, T)
     
-    # ==================== Visualization ====================
+    # 
     print("\n" + "=" * 80)
     print("Generating Visualizations")
     print("=" * 80)
@@ -203,7 +203,7 @@ def main() -> None:
     print(f"  - Initial vs Final: {output_dir}/comparison.png")
     print(f"  - Loss Evolution: {output_dir}/loss_history.png")
     
-    # ==================== Final Summary ====================
+    # 
     print("\n" + "=" * 80)
     print("Training Summary")
     print("=" * 80)
@@ -231,7 +231,7 @@ def main() -> None:
     print(f"  - Initial Condition: {loss_components['ic']:.6e}")
     print(f"  - Boundary Condition: {loss_components['bc']:.6e}")
     
-    # ==================== Save Model ====================
+    # 
     model_path = output_dir / "burgers_pinn_model.pt"
     trainer.save_checkpoint(str(model_path))
     

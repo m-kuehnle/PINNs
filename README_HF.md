@@ -1,6 +1,6 @@
 ---
 title: PINN Burgers Equation Solver
-emoji: 🌊
+emoji:
 colorFrom: blue
 colorTo: purple
 sdk: streamlit
@@ -16,10 +16,10 @@ An interactive web application for solving the 1D viscous Burgers' equation usin
 
 ## Features
 
-- 🎨 Interactive 3D visualization of the solution
-- ⚙️ Configurable physics and network parameters
-- 📊 Real-time training and loss monitoring
-- 🧠 Two-stage optimization (Adam + L-BFGS)
+- Interactive 3D visualization of the solution
+- Configurable physics and network parameters
+- Real-time training and loss monitoring
+- Two-stage optimization (Adam + L-BFGS)
 
 ## How to Use
 

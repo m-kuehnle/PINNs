@@ -2,11 +2,11 @@
 
 This project includes an interactive Streamlit web application for visualizing Physics-Informed Neural Networks solving the 1D Burgers' Equation.
 
-## 🌐 Deployment Options
+## Deployment Options
 
-### Option 1: Streamlit Cloud (Recommended)
+### Option 1: Streamlit Cloud
 
-1. **Fork/Push to GitHub** (already done ✅)
+1. Fork/Push to GitHub
 
    ```
    https://github.com/m-kuehnle/PINNs
@@ -65,15 +65,15 @@ streamlit run streamlit_app.py
 
 The app will open at `http://localhost:8501`
 
-## 🎯 Features
+## Features
 
-- **Interactive 3D Visualization**: Rotate and zoom the solution surface
-- **Parameter Control**: Adjust viscosity, network architecture, and training settings
-- **Real-time Training**: Train PINNs directly in the browser
-- **Loss Monitoring**: Track convergence with interactive plots
-- **Responsive Design**: Works on desktop and mobile devices
+- Interactive 3D Visualization: Rotate and zoom the solution surface
+- Parameter Control: Adjust viscosity, network architecture, and training settings
+- Real-time Training: Train PINNs directly in the browser
+- Loss Monitoring: Track convergence with interactive plots
+- Responsive Design: Works on desktop and mobile devices
 
-## 📊 Performance Notes
+## Performance Notes
 
 **Training Time:**
 
@@ -87,20 +87,20 @@ The app will open at `http://localhost:8501`
 - 1GB RAM limit
 - Recommend using default or reduced training iterations
 
-## 🔧 Configuration
+## Configuration
 
 The app caches trained models using `@st.cache_resource`, so:
 
 - Same parameters = instant reload (no retraining)
 - Different parameters = new training run
 
-## 📝 Notes
+## Notes
 
 - First deployment may take 5-10 minutes to build
 - Streamlit Cloud auto-restarts on git push
 - For production, consider pre-training and loading saved models
 
-## 🚀 Quick Deploy Command
+## Quick Deploy Command
 
 For Streamlit Cloud, just push to GitHub and follow the web interface.
 

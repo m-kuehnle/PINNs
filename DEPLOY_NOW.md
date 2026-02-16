@@ -1,16 +1,16 @@
-# 🚀 Quick Deployment Guide
+# Quick Deployment Guide
 
-## Your PINN App is Ready to Deploy! 🎉
+## Your PINN App is Ready to Deploy
 
 ### What You Have Now:
 
-✅ **Interactive Streamlit App** (`streamlit_app.py`)
+**Interactive Streamlit App** (`streamlit_app.py`)
 
 - Beautiful 3D visualizations with Plotly
 - Real-time parameter tuning
 - Live PINN training in the browser
 
-✅ **Deployment Configurations**
+**Deployment Configurations**
 
 - `.streamlit/config.toml` - App theming and settings
 - `requirements.txt` - Updated with streamlit and plotly
@@ -18,7 +18,7 @@
 
 ---
 
-## 🌐 Deploy to Streamlit Cloud (Easiest)
+## Deploy to Streamlit Cloud (Easiest)
 
 ### Step 1: Push Latest Changes to GitHub
 
@@ -53,11 +53,11 @@ git push origin main
    https://m-kuehnle-pinns.streamlit.app
    ```
 
-**That's it!** 🎉 Your interactive PINN app is now live!
+**That's it!** Your interactive PINN app is now live!
 
 ---
 
-## 🤗 Alternative: Deploy to Hugging Face Spaces
+## Alternative: Deploy to Hugging Face Spaces
 
 ### Step 1: Create a New Space
 
@@ -105,7 +105,7 @@ https://huggingface.co/spaces/YOUR_USERNAME/pinns-burgers-equation
 
 ---
 
-## 💻 Test Locally First
+## Test Locally First
 
 Before deploying, test the app on your machine:
 
@@ -123,7 +123,7 @@ Open your browser at: `http://localhost:8501`
 
 ---
 
-## 🎨 What Users Will See
+## What Users Will See
 
 When visitors access your deployed app, they can:
 
@@ -137,8 +137,8 @@ When visitors access your deployed app, they can:
 
 3. **Explore Interactive Visualizations**:
    - 🌊 **3D Surface Plot** - Rotate, zoom, pan the solution
-   - 📊 **Initial vs Final** - Side-by-side comparison
-   - 📉 **Loss Evolution** - Training convergence plot
+   - **Initial vs Final** - Side-by-side comparison
+   - **Loss Evolution** - Training convergence plot
 
 4. **View Statistics**:
    - Final loss, minimum loss
@@ -147,7 +147,7 @@ When visitors access your deployed app, they can:
 
 ---
 
-## ⚙️ Performance Tips
+## Performance Tips
 
 ### For Streamlit Cloud (Free Tier):
 
@@ -169,7 +169,7 @@ When visitors access your deployed app, they can:
 
 ---
 
-## 🔧 Customization
+## Customization
 
 ### Change App Theme
 
@@ -192,7 +192,7 @@ Edit `streamlit_app.py` to add:
 
 ---
 
-## 📊 Monitoring
+## Monitoring
 
 ### Streamlit Cloud:
 
@@ -208,7 +208,7 @@ Edit `streamlit_app.py` to add:
 
 ---
 
-## 🎯 Next Steps
+## Next Steps
 
 1. **Push to GitHub** (if not already done)
 2. **Deploy to Streamlit Cloud** (5 minutes)
@@ -217,7 +217,7 @@ Edit `streamlit_app.py` to add:
 
 ---
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
 **App won't start?**
 
@@ -239,7 +239,7 @@ Edit `streamlit_app.py` to add:
 
 ---
 
-## 📞 Support
+## Support
 
 - Streamlit Docs: [docs.streamlit.io](https://docs.streamlit.io)
 - Hugging Face Docs: [huggingface.co/docs/hub](https://huggingface.co/docs/hub/spaces)

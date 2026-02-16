@@ -9,28 +9,28 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-FF4B4B)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-[🚀 Live Demo](https://m-kuehnle-pinns.streamlit.app) | [📖 Documentation](DEPLOYMENT.md) | [🤗 Hugging Face](https://huggingface.co/spaces)
+[Live Demo](https://m-kuehnle-pinns.streamlit.app) | [Documentation](DEPLOYMENT.md) | [Hugging Face](https://huggingface.co/spaces)
 
 </div>
 
 ---
 
-## 🌐 Interactive Web App
+## Interactive Web App
 
-**Try it live!** Train and visualize PINNs directly in your browser:
+**Try it live:** Train and visualize PINNs directly in your browser.
 
-👉 **[Launch Interactive Demo](https://m-kuehnle-pinns.streamlit.app)**
+**[Launch Interactive Demo](https://m-kuehnle-pinns.streamlit.app)**
 
 Features:
 
-- 🎨 **Interactive 3D visualization** with Plotly
-- ⚙️ **Real-time parameter tuning** (viscosity, network architecture, training)
-- 📊 **Live training** and loss monitoring
-- 🔄 **Instant retraining** with different configurations
+- Interactive 3D visualization with Plotly
+- Real-time parameter tuning (viscosity, network architecture, training)
+- Live training and loss monitoring
+- Instant retraining with different configurations
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Interactive Web App](#interactive-web-app)
@@ -47,7 +47,7 @@ Features:
 
 ---
 
-## 🎯 Overview
+## Overview
 
 This repository provides a **production-ready implementation** of Physics-Informed Neural Networks (PINNs) to solve the **1D viscous Burgers' equation**. The implementation follows best practices in scientific machine learning with clean, modular code that adheres to PEP 8 standards.
 
@@ -62,7 +62,7 @@ Physics-Informed Neural Networks are a class of deep learning methods that embed
 
 ---
 
-## 📐 Mathematical Background
+## Mathematical Background
 
 ### The 1D Burgers' Equation
 
@@ -103,20 +103,20 @@ Derivatives are computed via **automatic differentiation** using PyTorch's autog
 
 ---
 
-## ✨ Features
+## Features
 
-- ✅ **Modular Architecture:** Clean separation of concerns (network, trainer, PDE solver, utilities)
-- ✅ **Type Hints:** Full type annotations for better code quality and IDE support
-- ✅ **Two-Stage Optimization:** Adam (fast convergence) + L-BFGS (high precision)
-- ✅ **Automatic Differentiation:** Physics residuals computed via `torch.autograd`
-- ✅ **Comprehensive Visualization:** 3D surface plots, comparisons, loss evolution
-- ✅ **PEP 8 Compliant:** Professional code standards with detailed docstrings
-- ✅ **Reproducible:** Seed control for consistent results
-- ✅ **Well-Documented:** Extensive comments and mathematical explanations
+- Modular Architecture: Clean separation of concerns (network, trainer, PDE solver, utilities)
+- Type Hints: Full type annotations for better code quality and IDE support
+- Two-Stage Optimization: Adam (fast convergence) + L-BFGS (high precision)
+- Automatic Differentiation: Physics residuals computed via `torch.autograd`
+- Comprehensive Visualization: 3D surface plots, comparisons, loss evolution
+- PEP 8 Compliant: Professional code standards with detailed docstrings
+- Reproducible: Seed control for consistent results
+- Well-Documented: Extensive comments and mathematical explanations
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 PINNs/
@@ -146,7 +146,7 @@ PINNs/
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 
@@ -190,9 +190,9 @@ pip install -r requirements.txt
 
 ---
 
-## 🎮 Quick Start
+## Quick Start
 
-### Option 1: Interactive Web App (Recommended)
+### Option 1: Interactive Web App
 
 ```bash
 # Install dependencies
@@ -213,7 +213,7 @@ python burgers_1d.py
 
 ---
 
-## 🌐 Web App Deployment
+## Web App Deployment
 
 Deploy your own interactive PINN app:
 
@@ -289,7 +289,7 @@ Final loss: 8.765432e-06
 
 ---
 
-## 📊 Results
+## Results
 
 After training, you'll find in the `results/` directory:
 
@@ -326,7 +326,7 @@ Checkpoint containing:
 
 ---
 
-## 🔧 Implementation Details
+## Implementation Details
 
 ### Network Architecture
 
@@ -376,7 +376,7 @@ u_xx = torch.autograd.grad(u_x, x, grad_outputs=torch.ones_like(u_x), create_gra
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -390,7 +390,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-## 📚 References
+## References
 
 ### Key Papers
 
@@ -406,13 +406,13 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Senior Research Engineer for Scientific Machine Learning**
 
@@ -420,7 +420,7 @@ _Specializing in Physics-Informed Neural Networks, Deep Learning for PDEs, and S
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - PyTorch team for the excellent deep learning framework
 - Scientific machine learning community
@@ -430,6 +430,6 @@ _Specializing in Physics-Informed Neural Networks, Deep Learning for PDEs, and S
 
 <div align="center">
 
-**If you find this repository useful, please consider giving it a ⭐!**
+**If you find this repository useful, please consider giving it a star.**
 
 </div>
