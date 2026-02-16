@@ -1,0 +1,13 @@
+.streamlit/
+.git/
+__pycache__/
+*.pyc
+.DS_Store
+results/
+*.pt
+*.pth
+examples/
+tests/
+.gitignore
+DEPLOYMENT.md
+README_HF.md

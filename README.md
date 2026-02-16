@@ -6,20 +6,40 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red)](https://pytorch.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-FF4B4B)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+[🚀 Live Demo](https://m-kuehnle-pinns.streamlit.app) | [📖 Documentation](DEPLOYMENT.md) | [🤗 Hugging Face](https://huggingface.co/spaces)
+
 </div>
+
+---
+
+## 🌐 Interactive Web App
+
+**Try it live!** Train and visualize PINNs directly in your browser:
+
+👉 **[Launch Interactive Demo](https://m-kuehnle-pinns.streamlit.app)**
+
+Features:
+
+- 🎨 **Interactive 3D visualization** with Plotly
+- ⚙️ **Real-time parameter tuning** (viscosity, network architecture, training)
+- 📊 **Live training** and loss monitoring
+- 🔄 **Instant retraining** with different configurations
 
 ---
 
 ## 📋 Table of Contents
 
 - [Overview](#overview)
+- [Interactive Web App](#interactive-web-app)
 - [Mathematical Background](#mathematical-background)
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
+- [Web App Deployment](#web-app-deployment)
 - [Results](#results)
 - [Implementation Details](#implementation-details)
 - [Contributing](#contributing)
@@ -165,12 +185,71 @@ pip install -r requirements.txt
 - `scipy>=1.10.0` - Scientific computing
 - `matplotlib>=3.7.0` - Visualization
 - `seaborn>=0.12.0` - Statistical visualization
+- `streamlit>=1.28.0` - Interactive web app
+- `plotly>=5.17.0` - Interactive 3D plots
 
 ---
 
 ## 🎮 Quick Start
 
-### Run the Example
+### Option 1: Interactive Web App (Recommended)
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch the Streamlit app
+streamlit run streamlit_app.py
+```
+
+Open your browser at `http://localhost:8501` and interact with the PINN in real-time!
+
+### Option 2: Command Line Script
+
+```bash
+cd examples
+python burgers_1d.py
+```
+
+---
+
+## 🌐 Web App Deployment
+
+Deploy your own interactive PINN app:
+
+### Streamlit Cloud (1-Click Deploy)
+
+1. Fork this repository on GitHub
+2. Go to [share.streamlit.io](https://share.streamlit.io)
+3. Click "New app" and select your forked repo
+4. Set main file: `streamlit_app.py`
+5. Click "Deploy"! 🚀
+
+Your app will be live at: `https://[your-username]-pinns.streamlit.app`
+
+### Hugging Face Spaces
+
+```bash
+# Create a new Streamlit Space on Hugging Face
+# Clone and copy files
+git clone https://huggingface.co/spaces/YOUR_USERNAME/pinns-app
+cd pinns-app
+cp -r ../PINNs/src .
+cp ../PINNs/streamlit_app.py app.py
+cp ../PINNs/requirements.txt .
+cp ../PINNs/README_HF.md README.md
+
+# Push to deploy
+git add .
+git commit -m "Deploy PINN app"
+git push
+```
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
+
+---
+
+## 🎮 Quick Start (CLI)
 
 ```bash
 cd examples
