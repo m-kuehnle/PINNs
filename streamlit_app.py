@@ -115,7 +115,7 @@ def create_3d_surface_plot(X, T, U):
     fig = go.Figure(data=[go.Surface(
         x=X, y=T, z=U,
         colorscale='RdBu_r',
-        colorbar=dict(title="u(x, t)", titleside="right"),
+        colorbar=dict(title="u(x, t)"),
         hovertemplate='x: %{x:.3f}<br>t: %{y:.3f}<br>u: %{z:.3f}<extra></extra>'
     )])
     
